@@ -8,10 +8,54 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - phone
+  - inform
+
+entities:
+  - number
+  - city 
+  - name 
+
+slots:
+  phone:
+    type: text 
+    influence_conversation: true 
+    mappings: 
+    - type: from_entity
+      entity : number
+  city:
+    type: text 
+    influence_conversation: true 
+    mappings: 
+    - type: from_entity
+      entity : city
+  name:
+    type: text 
+    influence_conversation: true 
+    mappings: 
+    - type: from_entity
+      entity : name
+
+forms:
+  simple_form:
+    required_slots:
+      - name
+      - city 
+      - phone
+
 
 responses:
   utter_greet:
   - text: "Hey! How are you?"
+
+  utter_ask_phone:
+  - text: "Can i get ur phone please?"
+
+  utter_ask_name:
+  - text: "What is ur name?"
+
+  utter_ask_city:
+  - text: "Which city do you live in"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -28,6 +72,10 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+actions:
+- action_say_data
+# - action_say_data
 
 session_config:
   session_expiration_time: 60

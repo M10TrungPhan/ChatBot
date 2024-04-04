@@ -1,0 +1,14 @@
+{
+    "yaml.schemas": {
+        "path/to/your-schema.json": [
+            "*.yaml",
+            "*.yml"
+        ],
+        "https://json.schemastore.org/prometheus.json": [
+            "file:///d%3A/coding/project/project_study/ChatBot/data/nlu.yml"
+        ],
+        "file:///d%3A/coding/project/project_study/ChatBot/path/to/your-schema.json": [
+            "file:///d%3A/coding/project/project_study/ChatBot/data/rules.yml"
+        ]
+    }
+}

@@ -30,6 +30,27 @@ nlu:
     - bye bye
     - see you later
 
+- intent: inform
+  examples: |
+    - [1234567890](number)
+    - This is my number [1237894560](number)
+    - Here you go [9876543210](number)
+    - My phone number is [9871234560](number)
+    - I am [Trung](name)
+    - My name is [Linh](name)
+    - [Trung](name)
+    - I live in [Gia Lai](city)
+    - I am from  [Dak Doa](city)
+    - my city is [Pleiku](city)
+    - [Vung Tau](city)
+
+- intent: repeat_phone
+  examples: |
+    - what is my phone number
+    - tell me my phone number 
+    - repeat my phone numbers
+
+
 - intent: affirm
   examples: |
     - yes
